@@ -1,0 +1,15 @@
+makefile is used to speed up the build process of a project , we create a makefile to replace all the commands that we used to build a project , and also makefile is efficient in a way as to rebuild only the necessary stuff  doesn't rebuild all the files , only the one that are changed ) , also it can be useful in big projects , new people can just use the makefile to run the project and see for themselves don't have to enter all the build commands and stuff
+
+u can define variables that can be placeholders for the finalized executable file names or to store any sources you have too. 
+
+and coming to rules , these rules define what would be done while builing , general format is 
+
+target : dependency 
+	command 
+
+make works by checking the timestamps of targets vs dependencies , if a target has older timestamp than dependency then make rebuilds the target
+
+SRCS = main.cpp math.cpp
+OBJS = $(SRCS:.cpp=.o)   // substitution ref in make
+
+make follows bottom up approach till the target is built 
