@@ -1,7 +1,7 @@
 CXX = g++
 
 SRCS = math.cpp main.cpp
-OBJS = OBJS = $(SRCS:.cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 TARGET = app.exe
 
 all: $(TARGET)
