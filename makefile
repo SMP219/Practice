@@ -5,6 +5,7 @@ OBJS = $(SRCS:.cpp=.o)
 TARGET = app.exe
 
 all: $(TARGET)
+	@./$(TARGET)
 
 $(TARGET): $(OBJS)
 	$(CXX) $(OBJS) -o $(TARGET)
